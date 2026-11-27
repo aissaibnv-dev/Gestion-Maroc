@@ -1,0 +1,80 @@
+/* Tema Atlas / Finance Dashboard per marocco.html
+   Aggiungere questo file dopo il CSS esistente con:
+   <link rel="stylesheet" href="marocco-theme.css">
+*/
+:root{
+  color-scheme:light;
+  --bg:#edf3fc;--tx:#10264d;--mu:#71809a;--bd:#dce6f4;
+  --rd:#d63838;--gr:#15945a;
+  --navy:#092653;--blue:#1268d8;--blue2:#0b4eaf;
+  --surface:rgba(255,255,255,.92);
+}
+html,body{min-height:100%;background:linear-gradient(145deg,#f8fbff 0%,#eaf2ff 55%,#dceaff 100%);color:var(--tx)}
+body{
+  max-width:620px;margin:0 auto;padding:calc(env(safe-area-inset-top,0px) + 22px) 20px calc(env(safe-area-inset-bottom,0px) + 104px);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",system-ui,sans-serif;
+  letter-spacing:-.015em;
+}
+button,input,select{font-family:inherit}
+.nav{min-height:48px;margin:0 0 22px;gap:12px}
+.nav b{font-size:14px;font-weight:750;letter-spacing:.13em;color:#17345f}
+.ib{width:42px;height:42px;border-radius:14px;background:rgba(255,255,255,.78);box-shadow:0 5px 16px rgba(20,54,102,.08);color:#315887;font-size:26px}
+.card{
+  padding:22px;margin:0 0 18px;border:1px solid rgba(255,255,255,.9);border-radius:25px;
+  background:var(--surface);box-shadow:0 12px 30px rgba(31,68,122,.09);backdrop-filter:blur(16px);
+}
+.card:last-child{border:1px solid rgba(255,255,255,.9)}
+.card h2{font-size:11px;font-weight:800;letter-spacing:.16em;color:#8291a8;margin:0 0 18px}
+.mu{color:var(--mu);font-size:13px;line-height:1.5}
+.big{font-size:clamp(42px,11vw,58px);font-weight:750;letter-spacing:-.055em;line-height:1.04;margin:9px 0 20px;color:inherit;overflow-wrap:anywhere}
+.g{gap:16px;margin-top:18px!important}
+.g b{font-size:25px;font-weight:750;letter-spacing:-.04em}
+.g span{font-size:10px;font-weight:750;letter-spacing:.13em;color:#8190a7}
+/* Prima scheda di ogni sezione: riepilogo principale */
+#v-mov>.card:first-child,#v-rie>.card:first-child,#v-cre>.card:first-child,#v-for>.card:first-child{
+  color:#fff;background:linear-gradient(135deg,#092653 0%,#0d3975 58%,#1268c9 100%);
+  border:0;box-shadow:0 18px 36px rgba(8,38,83,.22);padding:25px 23px 24px;position:relative;overflow:hidden;
+}
+#v-mov>.card:first-child:after,#v-rie>.card:first-child:after,#v-cre>.card:first-child:after,#v-for>.card:first-child:after{
+  content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-88px;top:-112px;box-shadow:0 0 0 25px rgba(255,255,255,.035),0 0 0 55px rgba(255,255,255,.025);pointer-events:none
+}
+#v-mov>.card:first-child .mu,#v-rie>.card:first-child .mu,#v-cre>.card:first-child .mu,#v-for>.card:first-child .mu{color:#c3d6f2}
+#v-mov>.card:first-child .big,#v-rie>.card:first-child .big,#v-cre>.card:first-child .big,#v-for>.card:first-child .big{color:#fff}
+#v-mov>.card:first-child .g span,#v-rie>.card:first-child .g span{color:#c3d6f2}
+#v-mov>.card:first-child .g b,#v-rie>.card:first-child .g b{color:#fff}
+#v-mov>.card:first-child .g .ok,#v-rie>.card:first-child .g .ok{color:#66e3a4}
+.bad{color:#f05b58!important}.ok{color:#15945a}
+#v-mov>.card:first-child .bad,#v-rie>.card:first-child .bad{color:#ffaaa5!important}
+.btn{
+  min-height:54px;border:0;border-radius:17px;padding:15px 18px;margin-top:17px;width:100%;
+  color:#fff;background:linear-gradient(110deg,#1685f5,#0754bd);font-size:15px;font-weight:750;
+  letter-spacing:.01em;box-shadow:0 9px 20px rgba(10,91,194,.22);transition:transform .15s,filter .15s
+}
+.btn:active{transform:scale(.985);filter:brightness(.96)}
+.btn.s{background:#f5f8fe;color:#194477;border:1px solid #dce7f6;box-shadow:none}
+.btn.d{background:#fff5f4;color:#c53232;border:1px solid #f3d9d7;box-shadow:none}
+#v-mov>.card:first-child .btn{background:linear-gradient(110deg,#1685f5,#0754bd);color:#fff}
+.row{gap:12px;padding:16px 0;border-bottom:1px solid #e8eef7;align-items:center}
+.row .l{min-width:0;line-height:1.4;font-weight:650;color:#19345d}
+.row .r{font-size:17px;font-weight:750;color:#18345e}
+.row .mu{font-size:12px;font-weight:450;color:#8391a7;margin-top:4px;overflow-wrap:anywhere}
+.row.tap{cursor:pointer;transition:background .15s}
+.row.tap:active{background:#f0f6ff}
+.bar{height:7px;border-radius:20px;background:#e8eff9;overflow:hidden}
+.bar i{border-radius:20px;background:linear-gradient(90deg,#1685f5,#4da5ff)}
+label{font-size:10px;font-weight:800;letter-spacing:.13em;color:#8291a8;margin:18px 0 5px}
+input,select{padding:13px 14px;border:1px solid #dce6f3;border-radius:13px;background:#f8faff;font-size:16px;color:#18345e;min-height:48px}
+input:focus,select:focus{border-color:#3989e8;box-shadow:0 0 0 3px rgba(57,137,232,.12)}
+.tel{color:#1768c4;font-weight:650}
+.tabs{
+  left:10px;right:10px;bottom:calc(env(safe-area-inset-bottom,0px) + 8px);max-width:600px;margin:0 auto;
+  display:flex;align-items:stretch;gap:2px;padding:7px 5px;
+  background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.95);border-radius:22px;
+  box-shadow:0 12px 35px rgba(22,53,99,.18);backdrop-filter:blur(20px)
+}
+.tabs button{flex:1;min-width:0;padding:10px 2px 9px;border:0;border-radius:15px;background:transparent;color:#7e8da5;font-size:9px;font-weight:800;letter-spacing:.015em;text-transform:uppercase;white-space:nowrap}
+.tabs button.on{color:#075ec9;background:#eaf3ff}
+#toast{bottom:calc(env(safe-area-inset-bottom,0px) + 88px);background:#102d59;color:#fff;border-radius:14px;padding:12px 18px;box-shadow:0 8px 24px rgba(9,38,83,.2)}
+.hid{display:none!important}
+@media(min-width:520px){body{padding-left:26px;padding-right:26px}.card{padding:25px}.tabs{left:50%;right:auto;width:calc(100% - 32px);transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
